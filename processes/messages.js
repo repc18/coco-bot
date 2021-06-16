@@ -35,7 +35,7 @@ module.exports = function processMessage(event) {
       };
       sessionClient
         .detectIntent(request)
-        .then((result) => {
+        .then((responses) => {
           const result = responses[0].queryResult;
           senderAction(senderID);
           sendGenericTemplate(senderID, result.fulfillmentText);
