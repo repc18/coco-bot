@@ -7,7 +7,7 @@ const projectID = "coco-bot-qshx";
 const languageCode = "en-US";
 const config = {
   credentials: {
-    private_key: process.env.DIALOGFLOW_PRIVATE_KEY,
+    private_key: JSON.parse(process.env.DIALOGFLOW_PRIVATE_KEY),
     client_email: process.env.DIALOGFLOW_CLIENT_EMAIL,
   },
 };
@@ -37,6 +37,7 @@ module.exports = function processMessage(event) {
         .detectIntent(request)
         .then((responses) => {
           const result = responses[0].queryResult;
+          senderAction(senderID);
           return sendGenericTemplate(senderID, result.fulfillmentText);
         })
         .catch((err) => {
