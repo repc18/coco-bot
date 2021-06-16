@@ -10,9 +10,13 @@
   "author": "Rephael Chen",
   "license": "ISC",
   "dependencies": {
+    "@google-cloud/dialogflow": "^4.1.0",
     "axios": "^0.21.1",
+    "dialogflow": "^1.2.0",
     "express": "^4.17.1",
     "morgan": "^1.10.0",
-    "request": "^2.88.2"
+    "node-fetch": "^2.6.1",
+    "request": "^2.88.2",
+    "uuid": "^3.4.0"
   }
 }

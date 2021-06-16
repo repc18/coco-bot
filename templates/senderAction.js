@@ -1,3 +1,4 @@
+// file that enables bot to show typing effect to the user
 const request = require("request");
 
 module.exports = function senderAction(recipientId) {

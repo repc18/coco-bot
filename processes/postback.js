@@ -33,7 +33,7 @@ module.exports = function processPostback(event) {
         sendMessage(senderID, { text: message }).then(() => {
           sendMessage(senderID, { text: message2 }).then(() => {
             sendMessage(senderID, { text: message3 }).then(() => {
-              sendMessage(senderID, { text: "🎉" });
+              sendMessage(senderID, { text: "🎈" });
             });
           });
         });
