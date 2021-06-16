@@ -37,8 +37,7 @@ module.exports = function processMessage(event) {
         .detectIntent(request)
         .then((responses) => {
           const result = responses[0].queryResult;
-          senderAction(senderID);
-          sendGenericTemplate(senderID, result.fulfillmentText);
+          return sendGenericTemplate(senderID, result.fulfillmentText);
         })
         .catch((err) => {
           console.error("ERROR: ", err);
