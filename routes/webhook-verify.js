@@ -24,12 +24,13 @@ module.exports = (app, chalk) => {
           console.log(event);
           if (event.postback) {
             processPostback(event);
+            res.sendStatus(200);
           } else if (event.message) {
             processMessage(event);
+            res.sendStatus(200);
           }
         });
       });
-      res.status(200);
     }
   });
 };
